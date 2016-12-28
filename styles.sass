@@ -1,0 +1,66 @@
+//SASS STYLING
+
+//VARIABLES
+$black: #282828
+$darkBlue : #1b4e5e
+$blue: #e74c3c
+
+$font-stack: 'open sans', Arial
+$font-size:16px
+$lh:150%
+
+
+
+
+//MIXINS
+
+=circleThing($rad, $height, $width, $bg, $color)
+  -webkit-border-radius: $rad
+  -moz-border-radius: $rad
+  -ms-border-radius: $rad
+  border-radius: $rad
+
+  height: $height
+  width: $width
+
+  line-height: $height
+  text-align: center
+
+  background: $bg
+  color: $color
+
+  margin: 0 auto
+
+//STYLES
+body
+  background: $darkBlue
+  color: $black
+  font-family: $font-stack
+  font-size: $font-size
+  line-height: $lh
+  margin: 50px auto
+
+
+article
+  background: white
+  width: 760px
+  position: relative
+  margin: -65px auto
+  z-index: -999
+  padding: 40px
+  box-sizing: border-box
+
+
+header
+  +circleThing(50%, 200px, 200px, $blue, white)
+
+  h1
+    font-size: $font-size+4
+
+footer
+  +circleThing(50%, 150px, 150px, $black, $darkBlue)
+  font-size: $font-size - 3
+  position: relative
+  margin-top: -65px
+  z-index: -9999
+  color: white
